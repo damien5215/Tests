@@ -6,36 +6,16 @@ namespace TestFiles
 {
     public class FibTest
     {
-        [Fact]
-        public void Caculate_Fib_Of_11()
+        [Theory]
+        [InlineData(11, 89)]
+        [InlineData(23, 28657)]
+        [InlineData(44, 701408733)]
+        [InlineData(68, 72723460248141)]
+        public void Caculate_Fib(int input, double output)
         {
-            var result = Fibonacci.Fib(11);
+            var result = Fibonacci.Fib(input);
 
-            Assert.Equal(89, result);
-        }
-
-        [Fact]
-        public void Caculate_Fib_Of_23()
-        {
-            var result = Fibonacci.Fib(23);
-
-            Assert.Equal(28657, result);
-        }
-
-        [Fact]
-        public void Caculate_Fib_Of_44()
-        {
-            var result = Fibonacci.Fib(44);
-
-            Assert.Equal(701408733, result);
-        }
-
-        [Fact]
-        public void Caculate_Fib_Of_68()
-        {
-            var result = Fibonacci.Fib(68);
-
-            Assert.Equal(72723460248141, result);
+            Assert.Equal(output, result);
         }
     }
 }

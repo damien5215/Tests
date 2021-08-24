@@ -17,11 +17,11 @@ namespace Tests
             else
             {
                 double[] fibArray = new double[n + 1];
-                return calcFib(n, fibArray);
+                return CalcFib(n, fibArray);
             }
         }
 
-        static double calcFib(int n, double[] fibArray)
+        static double CalcFib(int n, double[] fibArray)
         {
             if (n < 2)
             {
@@ -33,8 +33,8 @@ namespace Tests
             }
             else
             {
-                fibArray[n] = calcFib(n - 1, fibArray)
-                            + calcFib(n - 2, fibArray);
+                fibArray[n] = CalcFib(n - 1, fibArray)
+                            + CalcFib(n - 2, fibArray);
 
                 return fibArray[n];
             }
