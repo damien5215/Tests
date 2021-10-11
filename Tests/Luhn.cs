@@ -36,7 +36,8 @@ namespace Tests
 
                         dummyVar2 = dummyVar.ToString();
                         char[] dummyVar3 = dummyVar2.ToCharArray();
-                        dummyVar4 = Convert.ToInt32(dummyVar3[0].ToString()) + Convert.ToInt32(dummyVar3[1].ToString());
+                        dummyVar4 = Convert.ToInt32(dummyVar3[0].ToString()) 
+                            + Convert.ToInt32(dummyVar3[1].ToString());
 
                         result2 += dummyVar4;
                     }
