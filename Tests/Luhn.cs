@@ -23,7 +23,6 @@ namespace Tests
                 cardNo[i] = Convert.ToInt32(charArr[i].ToString());
                 result += cardNo[i];
             }
-            Console.WriteLine("After flip and convert to number: " + result);
 
             for (int i = 0; i < charArr.Length; i++)
             {
@@ -40,12 +39,10 @@ namespace Tests
                         dummyVar4 = Convert.ToInt32(dummyVar3[0].ToString()) + Convert.ToInt32(dummyVar3[1].ToString());
 
                         result2 += dummyVar4;
-                        //Console.WriteLine("Odd, After *2: " + i);
                     }
                     else
                     {
                         result2 += cardNo[i] * 2;
-                        //Console.WriteLine("Even, After * 2: " + i);
                     }
                 }
                 else
@@ -53,8 +50,6 @@ namespace Tests
                     result2 += cardNo[i];
                 }
             }
-            //Console.WriteLine(result + "\n");
-            //Console.WriteLine(result2 + "\n");
 
             if (result2 % 10 == 0)
             {
